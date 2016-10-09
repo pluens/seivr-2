@@ -1,40 +1,134 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <link rel="stylesheet" href="style.css">
-	  <title>CSS3 + jQuery Search Form</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-
+<head>
+    <link href="style.css" rel="stylesheet">
+    <title></title>
+    <meta content="width=device-width, initial-scale=1" name="viewport">
     <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link crossorigin="anonymous" href=
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+    integrity=
+    "sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    rel="stylesheet"><!-- Optional theme -->
+    <link crossorigin="anonymous" href=
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css"
+    integrity=
+    "sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+    rel="stylesheet"><!-- Latest compiled and minified JavaScript -->
+</head>
+<body style=" background-color:#F3F3F3;">
+    <div class="hero-unit">
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-  </head>
-  <body>
-    <div class="container">
-      <div class="hero">
-        <div class="row">
-          <img id="hero_img" src="img/images.jpeg">
+            <div class="row">
+                <div class="col-md-12"  style=" margin-top: 10%; ">
+                    <div class="input-group" id="adv-search">
+                        <input class="form-control" placeholder=
+                        "Search for snippets" type="text">
+                        <div class="input-group-btn">
+                            <div class="btn-group" role="group">
+                                <div class="dropdown dropdown-lg">
+                                    <button aria-expanded="false" class=
+                                    "btn btn-default dropdown-toggle"
+                                    data-toggle="dropdown" type=
+                                    "button"><span class=
+                                    "caret"></span></button>
+                                    <div class=
+                                    "dropdown-menu dropdown-menu-right" role=
+                                    "menu">
+                                        <form class="form-horizontal" role=
+                                        "form" action="result">
+                                            <div class="form-group">
+                                                <label for="filter">With in</label> <select class=
+                                                "form-control">
+                                                    <option selected value="0">
+                                                        5 miles
+                                                    </option>
+                                                    <option value="1">
+                                                        10 miles
+                                                    </option>
+                                                    <option value="2">
+                                                        25 miles
+                                                    </option>
+                                                    <option value="3">
+                                                        50 miles
+                                                    </option>
+                                                    <option value="4">
+                                                        100 miles
+                                                    </option>
+                                                </select>
+                                            </div>
+                                            <div class="form-group">
+                                                <label for=
+                                                "contain">Dietary Restrictions</label>
+                                                <input class="form-control"
+                                                type="text">
+                                            </div>
+                                            <div class="">
+                                                <label for=
+                                                "contain">Max Price</label>
+                                                <input type="range" min="0" max="100" value="50" step="1" onchange="showValue(this.value)" />
+                                                <span id="range">50</span>
+                                                <script type="text/javascript">
+                                                function showValue(newValue)
+                                                {
+                                                	document.getElementById("range").innerHTML=newValue;
+                                                }
+                                                </script>
+                                            </div>
+                                            <div class="">
+                                                <label for=
+                                                "contain">calorie count</label>
+                                                <input type="range" min="0" max="3000" value="50" step="1" onchange="showValue2(this.value)" />
+                                                <span id="calrange">50</span>
+                                                <script type="text/javascript">
+                                                function showValue2(newValue)
+                                                {
+                                                	document.getElementById("calrange").innerHTML=newValue;
+                                                }
+                                                </script>
+<br>
+
+                                            <button class=
+                                            "btn btn-primary" type=
+                                            "submit"><span aria-hidden="true"
+                                            class=
+                                            "glyphicon glyphicon-search"></span></button>
+                                        </form>
+                                    </div>
+                                </div><button class="btn btn-primary" type=
+                                "button"><span aria-hidden="true" class=
+                                "glyphicon glyphicon-search"></span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <form class="navbar-form navbar-left" role="search">
-          <div class="row">
-          <div class="form-group hero_search row">
-            <input type="text" class="form-control" placeholder="Search" style=" margin-left:50%;">
-          </div>
-          <select  class="form-control" style="margin-left:15px;">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
-            <option>4</option>
-            <option>5</option>
-          </select>
-          <button type="submit" class=" hero_btn">Submit</button>
-        </form>
-          </div>
-      </div>
     </div>
-  </body>
+    <div class="container">
+        <br>
+        <br>
+        <br>
+        <div class="row">
+            <div class="col-sm-1"></div>
+            <div class="col-sm-10">
+                <div class="box" style="padding: 10px ;">
+                  <h1 style="display:inline-block;">Look for restaurants near you that are:</h1><h1 style=" color:#E4E4E4;  display:inline-block;">click on one</h1><br>
+                    <img src="img/vegan.png" style="height:100px; width:100;" href="#" class="img-circle">
+                    <img src="img/gf.png" style="height:100px; width:100;" href="#" class="img-circle">
+                    <img src="img/dairy.png" style="height:100px; width:100;" href="#" class="img-circle">
+                    <img src="img/halal.jpeg" style="height:100px; width:100;" href="#" class="img-circle">
+                    <img src="img/kosher.png" style="height:100px; width:100;" href="#" class="img-circle">
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src=
+    "https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+    </script>
+    <script src=>
+    "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+    </script>
+</body>
 </html>
