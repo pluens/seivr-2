@@ -10,11 +10,10 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.sievr.model.DiningParams;
+import com.sievr.model.api.query.ApiParams;
+import com.sievr.model.api.result.Result;
 import com.sievr.util.JsonWebServiceClient;
-
-import sievr.com.model.DiningParams;
-import sievr.com.model.api.query.ApiParams;
-import sievr.com.model.api.result.Result;
 
 @RequestMapping("/rest")
 @RestController

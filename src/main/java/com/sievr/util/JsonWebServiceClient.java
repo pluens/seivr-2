@@ -8,22 +8,19 @@ import java.util.ArrayList;
 import java.util.Map;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
-
-import sievr.com.model.DiningParams;
-import sievr.com.model.api.query.ApiParams;
-import sievr.com.model.api.query.GoogleMapsApiParams;
-import sievr.com.model.api.query.GoogleSearchApiParams;
-import sievr.com.model.api.query.UsdaApiParams;
-import sievr.com.model.api.query.UsdaFoodNutrientReportParams;
-import sievr.com.model.api.result.FoodResult;
-
-import sievr.com.model.api.result.Result;
-
-import sievr.com.model.api.util.ResultReportWrapper;
-import sievr.com.model.api.util.WordResultWrapper;
-import sievr.com.model.api.util.MapsUtils.LocationReportWrapper;
-import sievr.com.model.api.util.UsdaNutrUtils.FoodNutrientReport;
-import sievr.com.model.api.util.UsdaUtils.FoodResultWrapperWrapper;
+import com.sievr.model.DiningParams;
+import com.sievr.model.api.query.ApiParams;
+import com.sievr.model.api.query.GoogleMapsApiParams;
+import com.sievr.model.api.query.GoogleSearchApiParams;
+import com.sievr.model.api.query.UsdaApiParams;
+import com.sievr.model.api.query.UsdaFoodNutrientReportParams;
+import com.sievr.model.api.result.FoodResult;
+import com.sievr.model.api.result.Result;
+import com.sievr.model.api.util.ResultReportWrapper;
+import com.sievr.model.api.util.WordResultWrapper;
+import com.sievr.model.api.util.MapsUtils.LocationReportWrapper;
+import com.sievr.model.api.util.UsdaNutrUtils.FoodNutrientReport;
+import com.sievr.model.api.util.UsdaUtils.FoodResultWrapperWrapper;
 
 public class JsonWebServiceClient {
 	private ObjectMapper mapper;
@@ -49,7 +46,6 @@ public class JsonWebServiceClient {
 			if(foods.length > 30){
 				for(int i = 0; i <10; i++){
 					
-					//do filtering
 				}
 			}
 			
